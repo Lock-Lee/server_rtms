@@ -1,0 +1,48 @@
+{
+  "name": "rtms_server",
+  "version": "1.0.0",
+  "description": "rtms_server",
+  "main": "index.js",
+  "dependencies": {
+    "@ant-design/icons": "^4.6.2",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "exceljs": "^4.3.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mkdirp": "^0.5.1",
+    "moment": "^2.29.1",
+    "monument": "^5.3.0",
+    "multer": "^1.4.2",
+    "mysql": "^2.17.1",
+    "node-cron": "^3.0.0",
+    "nodemailer": "^6.6.3",
+    "nodemon": "^2.0.13",
+    "request": "^2.88.2",
+    "serialport": "^9.0.7",
+    "socket.io": "^2.3.0",
+    "uuid": "^3.3.3"
+  },
+  "scripts": {
+    "start-dev": "nodemon index.js",
+    "migrate": "npx sequelize-cli db:migrate",
+    "migrate:reset": "npx sequelize-cli db:migrate:undo:all && npm run migrate",
+    "test": "cross-env NODE_ENV=test jest --testTimeout=10000",
+    "pretest": "cross-env NODE_ENV=test npm run migrate:reset"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "jest": "^27.5.1",
+    "supertest": "^6.2.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  }
+}

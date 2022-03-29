@@ -1,0 +1,6 @@
+/node_modules
+models/BaseModel.js
+ /public
+package-lock.json
+
+.vscode
